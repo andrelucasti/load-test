@@ -1,9 +1,7 @@
-mod service_controller;
-mod service_request;
-mod service;
-
 extern crate rocket;
 use rocket::{routes};
+mod service;
+use service::service_controller;
 
 #[rocket::launch]
 fn rocket() -> _ {

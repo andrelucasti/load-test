@@ -43,7 +43,5 @@ mod tests {
 
         assert_eq!(service.number_of_requests, 1)
     }
-
-
 }
 

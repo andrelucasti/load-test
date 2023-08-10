@@ -1,8 +1,10 @@
 use rocket::post;
 use rocket::response::status;
 use rocket::serde::json::Json;
-use crate::service::Service;
-use crate::service_request::ServiceRequest;
+
+use crate::service;
+use service::service_request::ServiceRequest;
+use service::service_model::Service;
 
 #[post("/service", format = "application/json",  data = "<request>")]
 pub fn run_test(request: Json<ServiceRequest>) -> status::Accepted<String> {
